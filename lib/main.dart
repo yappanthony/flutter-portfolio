@@ -25,7 +25,7 @@ class MainApp extends StatelessWidget {
           child: const Column(
             children: [
               Header(),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               CircleAvatar(
                 backgroundImage: AssetImage('../assets/id-pic.png'),
                 backgroundColor: Colors.transparent,
@@ -50,8 +50,37 @@ class MainApp extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 20),
-
+              Padding(
+                padding: EdgeInsets.only(left: 15, right: 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "👋 Hey there,",
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    Text(
+                      "It's Anthony Yap.",
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    SizedBox(height: 20,),
+                    Text(
+                      "Welcome to my developer profile! I'm Anthony Yap, a passionate software developer with four years of coding experience. I specialize in backend development and I'm always eager to learn new things and take on challenging projects",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 143, 143, 143),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         )
