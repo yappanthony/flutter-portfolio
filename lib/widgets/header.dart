@@ -22,8 +22,9 @@ class Header extends StatelessWidget {
           bottom: BorderSide(
             color: Colors.grey.withOpacity(0.2),
             width: 1.5
-          )
-        )
+          ),
+        ),
+        color: Colors.white,
       ),
       height: 75,
       child: Row(

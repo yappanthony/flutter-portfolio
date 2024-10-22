@@ -18,8 +18,15 @@ class Landing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(70.0),
+    return Container(
+      padding: const EdgeInsets.fromLTRB(70, 100, 70, 70),
+      decoration: const BoxDecoration(
+        gradient: RadialGradient(
+          radius: 1.3,
+          center: Alignment.bottomCenter,
+          colors: [Color.fromARGB(255, 255, 253, 235), Colors.white]
+        )
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -44,16 +51,15 @@ class Landing extends StatelessWidget {
                         gradient: LinearGradient(colors: [Colors.purple, Colors.orange]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
-                      child: const TextButton(
-                        onPressed: _launchGithub,
-                        child: Row(
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               "Say hello",
                               style: TextStyle(
                                 color: Color.fromARGB(255, 240, 240, 240),
-                        
                               ),
                             ),
                             SizedBox(width:10),
@@ -69,12 +75,12 @@ class Landing extends StatelessWidget {
                 
                     const SizedBox(width: 20),
                 
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                       width: 130,
                       child: OutlinedButton(
-                        onPressed: () {}, 
-                        child: const Text(
+                        onPressed: _launchGithub, 
+                        child: Text(
                           "My Portfolio",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
