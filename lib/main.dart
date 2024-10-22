@@ -3,6 +3,7 @@ import './widgets/header.dart';
 import './widgets/socials.dart';
 import './widgets/greeting_text.dart';
 import './desktop/landing.dart';
+import './desktop/software_dev_with_passion.dart';
 
 
 void main() {
@@ -51,21 +52,9 @@ class MainApp extends StatelessWidget {
                   child: GreetingText(headerFontSize:36),
                 ),
           
-              const Landing(),
-        
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white
-                ),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      '../assets/laptop-code.jpg',
-                      height: 100,
-                    )
-                  ],
-                ),
-              )
+              if(isDesktop(context))
+                const Landing(),
+                const SoftwareDevWithPassion()
             ],
           ),
         )
@@ -74,6 +63,7 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
 
 
 

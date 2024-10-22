@@ -19,7 +19,7 @@ class Landing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(70, 100, 70, 70),
+      padding: const EdgeInsets.all(70),
       decoration: const BoxDecoration(
         gradient: RadialGradient(
           radius: 1.3,
