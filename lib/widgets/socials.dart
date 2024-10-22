@@ -8,19 +8,16 @@ class Socials extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(15),
-      child: Row(
-        children: [
-          FaIcon(FontAwesomeIcons.instagram),
-          SizedBox(width: 20),
-          FaIcon(FontAwesomeIcons.facebook),
-          SizedBox(width: 20),
-          FaIcon(FontAwesomeIcons.twitter),
-          SizedBox(width: 20),
-          FaIcon(FontAwesomeIcons.linkedin),
-        ],
-      ),
+    return const Row(
+      children: [
+        FaIcon(FontAwesomeIcons.instagram),
+        SizedBox(width: 20),
+        FaIcon(FontAwesomeIcons.facebook),
+        SizedBox(width: 20),
+        FaIcon(FontAwesomeIcons.twitter),
+        SizedBox(width: 20),
+        FaIcon(FontAwesomeIcons.linkedin),
+      ],
     );
   }
 }
