@@ -7,8 +7,16 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDesktop(BuildContext context) => 
+      MediaQuery.sizeOf(context).width > 939;
+
+    bool isMobile(BuildContext context) =>
+      MediaQuery.sizeOf(context).width <= 939;
+
     return Container(
-      padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
+      padding: isMobile(context) 
+        ? const EdgeInsets.fromLTRB(15, 20, 15, 20) 
+        : const EdgeInsets.fromLTRB(70, 20, 70, 20),
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
@@ -42,9 +50,51 @@ class Header extends StatelessWidget {
               )
             ],
           ),
+
+          if (isDesktop(context))
+            const Row(
+              children: [
+                Text(
+                  'Home',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(width: 15,),
+                Text(
+                  'About',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(width: 15,),
+                Text(
+                  'Works',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(width: 15,),
+                Text(
+                  'Services',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(width: 15,),
+                Text(
+                  'Contact',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ],
+            ),
+
+
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              padding: const EdgeInsets.only(left: 10, right: 10,),
+              padding: const EdgeInsets.only(left: 15, right: 15,),
               
             ),
             onPressed: () {}, 
