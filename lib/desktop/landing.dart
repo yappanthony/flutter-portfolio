@@ -41,7 +41,7 @@ class Landing extends StatelessWidget {
               children: [
                 const Socials(),
                 const SizedBox(height: 15),
-                const GreetingText(headerFontSize:52),
+                const GreetingText(headerFontSize:52, textFontSize:18),
                 
                 const SizedBox(height: 40),
                 

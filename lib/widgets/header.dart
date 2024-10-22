@@ -107,7 +107,8 @@ class Header extends StatelessWidget {
                 Text(
                   "Let's Talk ",
                   style: TextStyle(
-                    color: Color.fromARGB(255, 34, 34, 34)
+                    color: Color.fromARGB(255, 34, 34, 34),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Icon(

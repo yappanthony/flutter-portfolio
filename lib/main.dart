@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import './widgets/header.dart';
-import './widgets/socials.dart';
-import './widgets/greeting_text.dart';
 import './desktop/landing.dart';
 import './desktop/software_dev_with_passion.dart';
+import './mobile/mobile_view.dart';
 
 
 void main() {
@@ -31,26 +30,9 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               const Header(),
-              if(isMobile(context))
-                const CircleAvatar(
-                  backgroundImage: AssetImage('../assets/id-pic.png'),
-                  backgroundColor: Colors.transparent,
-                  maxRadius: 150,
-                ),
-          
-              if(isMobile(context))
-                const SizedBox(height: 20),
-          
-              if(isMobile(context))
-                //Socials
-                const Socials(),
+              if (isMobile(context))
+                const MobileView(),
               
-              if(isMobile(context))
-                const Padding(
-                  padding: EdgeInsets.only(left: 15, right: 15),
-                  child: GreetingText(headerFontSize:36),
-                ),
-          
               if(isDesktop(context))
                 const Landing(),
               
@@ -64,6 +46,7 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
 
 
 
