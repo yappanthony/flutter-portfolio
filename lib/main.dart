@@ -16,10 +16,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDesktop(BuildContext context) => 
-      MediaQuery.sizeOf(context).width > 939;
+      MediaQuery.sizeOf(context).width >= 1000;
 
     bool isMobile(BuildContext context) =>
-      MediaQuery.sizeOf(context).width <= 939;
+      MediaQuery.sizeOf(context).width < 1000;
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -27,7 +27,6 @@ class MainApp extends StatelessWidget {
         iconTheme: const IconThemeData(size: 20),
       ),
       home: Scaffold(
-        
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -54,7 +53,9 @@ class MainApp extends StatelessWidget {
           
               if(isDesktop(context))
                 const Landing(),
-                const SoftwareDevWithPassion()
+              
+              if(isDesktop(context))
+                const SoftwareDevWithPassion(),
             ],
           ),
         )

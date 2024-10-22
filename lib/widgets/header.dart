@@ -8,15 +8,18 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDesktop(BuildContext context) => 
-      MediaQuery.sizeOf(context).width > 939;
+      MediaQuery.sizeOf(context).width >= 1000;
 
     bool isMobile(BuildContext context) =>
-      MediaQuery.sizeOf(context).width <= 939;
+      MediaQuery.sizeOf(context).width < 1000;
+
+    double screenPadding(BuildContext context) =>
+      MediaQuery.sizeOf(context).width * 0.1;
 
     return Container(
       padding: isMobile(context) 
         ? const EdgeInsets.fromLTRB(15, 20, 15, 20) 
-        : const EdgeInsets.fromLTRB(70, 20, 70, 20),
+        : EdgeInsets.fromLTRB(screenPadding(context), 20, screenPadding(context), 20),
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(

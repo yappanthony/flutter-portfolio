@@ -18,13 +18,16 @@ class Landing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenPadding(BuildContext context) =>
+      MediaQuery.sizeOf(context).width * 0.1;
+
     return Container(
-      padding: const EdgeInsets.all(70),
+      padding: EdgeInsets.fromLTRB(screenPadding(context), 70, screenPadding(context), 70),
       decoration: const BoxDecoration(
         gradient: RadialGradient(
-          radius: 1.3,
+          radius: 1.5,
           center: Alignment.bottomCenter,
-          colors: [Color.fromARGB(255, 255, 253, 235), Colors.white]
+          colors: [Color.fromARGB(255, 255, 252, 229), Colors.white]
         )
       ),
       child: Row(

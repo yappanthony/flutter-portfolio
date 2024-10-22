@@ -7,11 +7,14 @@ class SoftwareDevWithPassion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenPadding(BuildContext context) =>
+      MediaQuery.sizeOf(context).width * 0.1;
+
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white
       ),
-      padding: const EdgeInsets.fromLTRB(70, 50, 70, 50),
+      padding: EdgeInsets.fromLTRB(screenPadding(context), 50, screenPadding(context), 50),
       child: Row(
         children: [
           ClipRRect(
@@ -31,7 +34,7 @@ class SoftwareDevWithPassion extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  "Developing Software with\nPassion",
+                  "Developing Software with a Passion",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
