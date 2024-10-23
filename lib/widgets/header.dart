@@ -56,40 +56,61 @@ class Header extends StatelessWidget {
           ),
 
           if (isDesktop(context))
-            const Row(
+            Row(
               children: [
-                Text(
-                  'Home',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Home',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      
+                    ),
                   ),
                 ),
-                SizedBox(width: 15,),
-                Text(
-                  'About',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
+                const SizedBox(width: 15,),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'About',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
                   ),
                 ),
-                SizedBox(width: 15,),
-                Text(
-                  'Works',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
+                const SizedBox(width: 15,),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Works',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
                   ),
                 ),
-                SizedBox(width: 15,),
-                Text(
-                  'Services',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
+                const SizedBox(width: 15,),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Services',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
                   ),
                 ),
-                SizedBox(width: 15,),
-                Text(
-                  'Contact',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
+                const SizedBox(width: 15,),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Contact',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
                   ),
                 ),
               ],
