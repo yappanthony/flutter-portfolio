@@ -60,12 +60,18 @@ class Header extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: const Text(
-                    'Home',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      
+                  child: ShaderMask(
+                    blendMode: BlendMode.srcIn,
+                    shaderCallback: (bounds) => const LinearGradient(colors:[Colors.purple, Colors.orange]).createShader(
+                      Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+                    ),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        
+                      ),
                     ),
                   ),
                 ),
